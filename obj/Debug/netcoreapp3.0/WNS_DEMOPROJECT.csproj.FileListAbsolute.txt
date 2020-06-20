@@ -140,9 +140,9 @@ D:\Wns_ASPCore\WNS_DEMOPROJECT\bin\Debug\netcoreapp3.0\WNS_DEMOPROJECT.Views.pdb
 D:\Wns_ASPCore\WNS_DEMOPROJECT\obj\Debug\netcoreapp3.0\WNS_DEMOPROJECT.Views.pdb
 D:\Wns_ASPCore\WNS_DEMOPROJECT\obj\Debug\netcoreapp3.0\WNS_DEMOPROJECT.dll
 D:\Wns_ASPCore\WNS_DEMOPROJECT\obj\Debug\netcoreapp3.0\WNS_DEMOPROJECT.pdb
-D:\Wns_ASPCore\WNS_DEMOPROJECT\obj\Debug\netcoreapp3.0\WNS_DEMOPROJECT.MvcApplicationPartsAssemblyInfo.cache
 D:\Wns_ASPCore\WNS_DEMOPROJECT\obj\Debug\netcoreapp3.0\Razor\Views\PatientDatas\Create.cshtml.g.cs
 D:\Wns_ASPCore\WNS_DEMOPROJECT\obj\Debug\netcoreapp3.0\Razor\Views\PatientDatas\Delete.cshtml.g.cs
 D:\Wns_ASPCore\WNS_DEMOPROJECT\obj\Debug\netcoreapp3.0\Razor\Views\PatientDatas\Details.cshtml.g.cs
 D:\Wns_ASPCore\WNS_DEMOPROJECT\obj\Debug\netcoreapp3.0\Razor\Views\PatientDatas\Edit.cshtml.g.cs
 D:\Wns_ASPCore\WNS_DEMOPROJECT\obj\Debug\netcoreapp3.0\Razor\Views\PatientDatas\Index.cshtml.g.cs
+D:\Wns_ASPCore\WNS_DEMOPROJECT\obj\Debug\netcoreapp3.0\WNS_DEMOPROJECT.MvcApplicationPartsAssemblyInfo.cache

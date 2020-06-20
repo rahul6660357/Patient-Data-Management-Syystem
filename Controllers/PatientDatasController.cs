@@ -22,6 +22,12 @@ namespace WNS_DEMOPROJECT.Controllers
         // GET: PatientDatas
         public async Task<IActionResult> Index()
         {
+        
+           
+                IQueryable<string>
+          assumpquery = from m in _context.PatientDatas select m.assumptions;
+                var assumptions = assumpquery.Distinct().Count();
+         
             var data = await _context.PatientDatas.ToListAsync();
                 return View(data);
         }
