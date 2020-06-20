@@ -55,44 +55,44 @@
                 {
                     <th scope="col">@i</th>
                 }
-              <th scope="col">Total</th>
+               <th scope="col">Total</th> 
             </tr>
         </thead>
-        <tbody>
+        <tbody >
             @foreach (var record in Model)
             {
-                <tr>
+                <tr >
                     <th scope="row"> @Html.DisplayFor(modelItem => record.assumptions)</th>
                     @for (var i = 2016; i < 2025; i++)
                     {
                         <td><input class="myclass"  value="2" style="width:60px" /></td>
                     }
                     
-                  <td><p id="demo"></p></td> 
+              @*  <td><input style="width:60px" disabled /></td> *@
 
-
+                <td>   <p id="myp"> </p></td>
                 </tr>
             }
         </tbody>
     </table>
     <script>
-         jQuery('document').ready(function () {
-
+        jQuery('document').ready(function () {
             getRowTotal();
+            
           });
          function getRowTotal() {
-                $table1 = jQuery('#tabler');
-               /* $table1.find('thead tr').append('<th>Total</th>');*/
+             $table1 = jQuery('#tabler'); 
+        
              $table1.find('tbody tr').each(function () {
                  var sum = 0;
                  jQuery(this).find('input').each(function () {
 
                      sum = sum + parseInt(this.value);
+
                  });
-         
-                   document.getElementById( 
-              "demo").innerHTML = sum; 
-              //   $(".totalrow").value = sum;
+                 // $table1.find('p').value = sum;
+                
+                  $("#myp", this).html(sum);
              });
             }
        
