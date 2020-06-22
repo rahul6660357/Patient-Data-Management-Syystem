@@ -87,7 +87,7 @@ namespace WNS_DEMOPROJECT.Controllers
             }
             return View(patientData);
         }
-
+        [HttpPost]
         public IActionResult Save(List<PatientData> pdt)
         {
             return Ok("success");

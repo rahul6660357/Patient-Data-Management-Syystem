@@ -47,7 +47,7 @@
     </tbody>
 </table>
 <button type="submit" id="btn1" class="btn btn-primary" onclick="getRowTotal()">STotal</button>
-<button type="submit" id="btn2" class="btn btn-primary" onclick="submitdata()">Submit Data</button>
+<button type="submit" id="btn2" class="btn btn-primary"  onclick="submitdata()">Submit Data</button>
 <table id="tabler" class="table table-striped">
     <thead>
         <tr>
@@ -125,7 +125,7 @@
             result.push(row);
         });
         let r = [];
-        console.log(result);
+      //  console.log(result);
         result.forEach(row => {
             var s = 0;
             
@@ -148,55 +148,53 @@
 
     }
 
-    function submitdata() {
-        var alldata = [];
-
-
-        
+    function submitdata() {      
         var result = [];
 
         $table1 = jQuery('#tabler')
         $table1.find('tbody tr').each(function (index, ele) {
-
             var rowInputs = ele.querySelectorAll('input');
             var row = [];
+            
             rowInputs.forEach((cell) => {
                 if (cell.hasAttributes()) {
                     var attrs = cell.attributes;
                     let i = 1;
-                    row.push(cell.value);
-                    row.push(attrs[i].value);
+                    var dataa = cell.value;
+                    var yearr = attrs[i].value;
                     i++;
-                row.push(attrs[i].value);
+                    var assumptionss = attrs[i].value;
+                    var obj = {
+                        data: dataa,
+                        year: yearr,
+                        assumptions: assumptionss
+                    };
+                    row.push(obj);
                 }
-                
             });
-            console.log(row);
+           // console.log(row);
             result.push(row);
             
         });
         console.log(result);
-        let r = [];
-        result.forEach(row => {
-            var s = 0;
-            
-            row.forEach((cell, index) => {
-             //   console.log("index"+index);
-             //   console.log("cell value = "+cell);
-             
-                if (!r[index]) {
-                    r[index] = parseFloat(cell);
+      //  var data = JSON.stringify(result);
+        //    console.log(data);
+      $.ajax({
+          type: 'POST',
+          url: '/PatientDatas/Save',
+          data: JSON.stringify(result),
+           traditional: true,
+          contentType: 'application/json',
+          dataType: "json",
+          success: function (response, data) {
+           alert(response.someValue);
+           },
+          error: function (err) {
+              console.log(data);
+    }
+});
 
-               //     console.log("r index ="+ r[index]);
-                }
-                else if (!isNaN(cell)) r[index] += parseFloat(cell);
-            })
-        })
-        var mytr = document.querySelector('#mytr');
-        mytr.innerHTML = '<td>Total</td>';
-        r.forEach((value) => {
-            mytr.innerHTML += `<td>${value}</td>`;
-        })
 
+        
     }
 </script>
