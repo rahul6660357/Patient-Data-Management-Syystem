@@ -9,12 +9,15 @@ namespace WNS_DEMOPROJECT.Models
     public class PatientData
     {
         public int id { get; set; }
+        [Required]
+        [StringLength(100)]
         public string assumptions { get; set; }
-        [Column(TypeName = "decimal(18, 2)")]
-        [Range(1, 1000)]
+       
         [DataType(DataType.Currency)]
+        [Required]
         public decimal data { get; set; }
-
+        [Required]
+       
         public int year { get; set; }
     }
 }

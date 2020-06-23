@@ -88,8 +88,9 @@ namespace WNS_DEMOPROJECT.Controllers
             return View(patientData);
         }
         [HttpPost]
-        public IActionResult Save(List<PatientData> pdt)
+        public IActionResult Save( List<PatientData> pdt)
         {
+            Console.WriteLine("success");
             return Ok("success");
         }
 
